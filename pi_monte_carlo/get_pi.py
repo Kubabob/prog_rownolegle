@@ -29,3 +29,5 @@ if my_rank == 0:
     print(
         f"Pi({4*pi/n_points}) calculated with {size} processes took: {finish - start}"
     )
+    with open("pi_results.csv", "a") as f:
+        f.write(f"{size}, {n_points}, {4*pi/n_points}\n")
